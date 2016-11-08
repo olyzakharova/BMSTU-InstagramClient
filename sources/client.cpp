@@ -14,10 +14,10 @@ namespace Instagram
 			CURL *curl_ = curl_easy_init();
 			if (curl_)
 			{   
-				string token = "access token " + settings_["token"]);
+				string data= "access token " + settings_["4079059384.39f3c6e.29a442eca7f54865a92e071db07cd987"]);
 				CURLcode res;
 				curl_easy_stopt(curl, CURLOPT_URL, "https://api.instagram.com/v1/users/self/?access_token=4079059384.39f3c6e.29a442eca7f54865a92e071db07cd987"); 
-				curl_easy_stopt(curl, CURLOPT_POST, token.c_str()); //  c_str формирует массив строк в стиле си. И возвращает указатель на него.
+				curl_easy_stopt(curl, CURLOPT_POST, data.c_str()); //  c_str формирует массив строк в стиле си. И возвращает указатель на него.
 				res = curl_easy_perform(curl);
 				if (res == CURLE_OK)
 					{
