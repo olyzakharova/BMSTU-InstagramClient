@@ -31,7 +31,7 @@ namespace Instagram
    
   
   
-  auto InstagramClient::get_followers ()-> bool
+  auto InstagramClient::get_followers ()-> void
   { 
     CURL *curl = curl_easy_init();
       if (curl)
