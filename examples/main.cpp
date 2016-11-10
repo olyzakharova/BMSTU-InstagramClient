@@ -4,7 +4,7 @@ int main()
 {
   Instagram::InstagramClient client;
   client.check_connection();
-  client.get_most_recent_media();
+  //client.get_most_recent_media();
 
   return 0;
 }
