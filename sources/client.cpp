@@ -87,15 +87,4 @@ namespace Instagram
 		}
     }
 
-
-   // auto InstagramClient::search(){}
-
-
-    auto InstagramClient::callback(char *ptr_, size_t size_, size_t nmemb_, string &userdata_)->size_t
-    {
-        size_t real_size = size * nmemb;
-        userdata_ += ptr;
-        return real_size;
-
-    }
 }
