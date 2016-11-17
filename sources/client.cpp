@@ -67,7 +67,7 @@ namespace Instagram
 		{
 			CURLcode res;
 			curl_easy_setopt(curl, CURLOPT_URL, "https://api.instagram.com/v1/users/self/media/recent/?access_token=4079059384.39f3c6e.29a442eca7f54865a92e071db07cd987");
-            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION,callback);
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION,write_callback);
             curl_easy_setopt(curl,CURLOPT_WRITEDATA, &json_);
             res = curl_easy_perform(curl);
             if (res == CURL_OK && json != "")
@@ -88,7 +88,7 @@ namespace Instagram
     }
 
 
-   // auto InstagramClient::search(){}// позже
+   // auto InstagramClient::search(){}
 
 
     auto InstagramClient::callback(char *ptr_, size_t size_, size_t nmemb_, string &userdata_)->size_t
