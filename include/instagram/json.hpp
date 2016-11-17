@@ -1,20 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @olyzakharova
- Watch 245
-  Star 3,643
-  Fork 546 nlohmann/json
- Code  Issues 27  Pull requests 5  Projects 1  Pulse  Graphs
-Branch: develop Find file Copy pathjson/src/json.hpp
-9ca00e4  5 days ago
-@nlohmann nlohmann readded missing header
-12 contributors @nlohmann @twelsby @dariomt @Florianjw @robertmrk @whackashoe @lv-zheng @jrandall @likebeta @vpetrigo @Teemperor @06needhamt
-RawBlameHistory     
-10795 lines (8945 sloc)  356 KB
+
 /*
     __ _____ _____ _____
  __|  |   __|     |   | |  JSON for Modern C++
@@ -9727,5 +9711,4 @@ inline nlohmann::json::json_pointer operator "" _json_pointer(const char* s, std
 #endif
 
 #endif
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
+
