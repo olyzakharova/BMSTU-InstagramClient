@@ -27,7 +27,7 @@ endif()
 
 add_executable(Examples ${CMAKE_CURRENT_SOURCE_DIR}/examples/main.cpp)
 
-target_link_libraries(Examples ${PROJECT_NAME} ${DEPENDS_LIBRARIES})
+target_link_libraries(Examples ${PROJECT_NAME} ${DEPENDS_LIBRARIES} pthread)
 
 if(BUILD_TESTS)
     enable_testing()
