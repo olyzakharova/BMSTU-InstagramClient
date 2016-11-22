@@ -81,7 +81,6 @@ namespace Instagram
                                    throw std::runtime_error("no link member");
 				
                                 string str = link.dump(4);
-				cout << "link: " << str << endl;
                                 curl_easy_cleanup(curl);
 				return str;
 
