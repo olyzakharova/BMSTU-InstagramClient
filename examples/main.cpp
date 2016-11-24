@@ -29,7 +29,6 @@ void thread_func(unsigned int id, bool v)
   try
   {
     Instagram::InstagramClient client;
-    //client.check_connection();
     cout << "link: " << client.get_most_recent_media() << endl;
   }
   catch(exception& e)
@@ -50,15 +49,20 @@ int main(int argc, char* argv[])
     return -1;
   }
 
-  const unsigned int nthreads = atoi(argv[1]);
+  const unsigned long nthreads = strtol(argv[1], NULL, 10);
   const unsigned int max_nthreads = std::thread::hardware_concurrency();
-  if(nthreads > max_nthreads)
+  if(nthreads == 0)
+  {
+    cout << "threads must be integer > 0" << std::endl;
+    return -1;
+  }
+  else if(nthreads > max_nthreads)
   {
     cout << "threads must be <= " << max_nthreads << std::endl;
     return -1;
   }
 
-  bool verbose = (atoi(argv[2]) != 0);
+  bool verbose = (strtol(argv[2], NULL, 10) != 0);
 
   std::vector<std::thread> threads;
 
@@ -69,7 +73,8 @@ int main(int argc, char* argv[])
 
   for(auto& thread: threads)
   {
-    thread.join();
+    if(thread.joinable())
+      thread.join();
   }
 
   return 0;
