@@ -9,7 +9,7 @@ matrix:
           packages:
             - g++-5
             - cmake
-            - libboost-dev
+            - libboost-all-dev
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
@@ -21,7 +21,7 @@ matrix:
           packages:
             - g++-4.9
             - cmake
-            - libboost-dev
+            - libboost-all-dev
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test 
@@ -29,7 +29,5 @@ script:
   - mkdir build
   - cd build
   - cmake .. && make
-  - echo "2" 
-  - echo "0" 
-  - ./Examples 
+  - ./Examples 2 1
   
