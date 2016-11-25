@@ -27,6 +27,5 @@ script:
   - mkdir build
   - cd build
   - cmake .. && make
-  - ./Examples
-  - ./Examples 1 1
+  - echo "3 0" | ./Examples -s -r compact
   
