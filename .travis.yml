@@ -1,4 +1,3 @@
-
 language: generic
 matrix:
   include:
@@ -24,8 +23,7 @@ matrix:
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-   
-  script:
+script:
   - mkdir build
   - cd build
   - cmake .. && make
