@@ -27,5 +27,6 @@ script:
   - mkdir build
   - cd build
   - cmake .. && make
-  - ./Examples 2 1
+  - ./Examples
+  - echo "2 0" | ./Examples 
   
