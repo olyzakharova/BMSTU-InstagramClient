@@ -30,5 +30,5 @@ matrix:
   - cd build
   - cmake .. && make
   - ./Examples
-  - ./Examples 1 2
+  - ./Examples 1 1
   
