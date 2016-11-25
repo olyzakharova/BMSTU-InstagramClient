@@ -29,6 +29,6 @@ matrix:
   - mkdir build
   - cd build
   - cmake .. && make
-  - ./examples
-  - ./examples 1 2
+  - ./Examples
+  - ./Examples 1 2
   
