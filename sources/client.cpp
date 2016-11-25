@@ -3,7 +3,7 @@
 #include <curl/curl.h>
 #include <iostream>
 #include "instagram/json.hpp"
-#include <boost/property_tree/json_parser.hpp>
+//#include <boost/property_tree/json_parser.hpp>
 
 
 using namespace std;
@@ -39,10 +39,10 @@ namespace Instagram
 		
             if (res == CURLE_OK && json_ != "")
                 {
-                    boost::property_tree::ptree pt;
+                   /* boost::property_tree::ptree pt;
                     stringstream ss(json_);
                     boost::property_tree::read_json(ss,pt);
-                    boost::property_tree::write_json(cout, pt);
+                    boost::property_tree::write_json(cout, pt); */
                     cout << "authentication is successful" << endl;
                     return true;
                 }
