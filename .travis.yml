@@ -9,6 +9,7 @@ matrix:
           packages:
             - g++-5
             - cmake
+          install:
             - libboost-all-dev
           sources: &sources
             - llvm-toolchain-precise
@@ -21,6 +22,7 @@ matrix:
           packages:
             - g++-4.9
             - cmake
+          install:
             - libboost-all-dev
           sources: &sources
             - llvm-toolchain-precise
