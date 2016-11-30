@@ -18,5 +18,5 @@ script:
   - mkdir build
   - cd build
   - cmake .. && make
-  - ./Examples 2 1
+  - ./Counter /
   
