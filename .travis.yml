@@ -8,25 +8,12 @@ matrix:
         apt:
           packages:
             - g++-5
+            - libboost1.55-all-dev
             - cmake
-          install:
-            - libboost1.46-all-dev
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-    - os: linux
-      sudo: required
-      env: COMPILER_NAME=gcc CXX=g++-4.9 CC=gcc-4.9
-      addons:
-        apt:
-          packages:
-            - g++-4.9
-            - cmake
-          install:
-            - libboost1.46-all-dev
-          sources: &sources
-            - llvm-toolchain-precise
-            - ubuntu-toolchain-r-test 
+            - boost-latest
 script:
   - mkdir build
   - cd build
