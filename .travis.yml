@@ -10,7 +10,7 @@ matrix:
             - g++-5
             - cmake
           install:
-            - libboost-all-dev
+            - libboost1.46-all-dev
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
@@ -23,7 +23,7 @@ matrix:
             - g++-4.9
             - cmake
           install:
-            - libboost-all-dev
+            - libboost1.46-all-dev
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test 
