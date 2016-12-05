@@ -1,5 +1,5 @@
 # InstagramClient
-Prject 2
+Project 2
  - API
  - curl
  - threads
